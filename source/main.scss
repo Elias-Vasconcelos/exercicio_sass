@@ -1,0 +1,32 @@
+@use 'config/reset.scss';
+@use 'config/cores.scss';
+@use 'section/header.scss';
+@use 'section/produtos.scss';
+
+body {
+    background-color: cores.$CorDeFundo;
+
+    li {
+    list-style: none;
+}
+}
+
+@media screen and (max-width: reset.$tablet){
+    reset.container {
+        max-width: 80%;
+    }
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: reset.$mobile){
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
